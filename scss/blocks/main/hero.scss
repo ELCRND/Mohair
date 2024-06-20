@@ -1,0 +1,166 @@
+.hero {
+  .hero-1,
+  .hero-2,
+  .hero-3 {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $white;
+
+    h1,
+    h2 {
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: "Jost", sans-serif;
+      font-size: 55px;
+      line-height: 69px;
+      font-weight: 400;
+    }
+
+    span {
+      margin-top: 24px;
+      margin-bottom: 24px;
+      display: block;
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    a {
+      max-width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      position: relative;
+      span {
+        position: absolute;
+        top: -17%;
+        left: 50%;
+        translate: -50% 0;
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 25px;
+        letter-spacing: 3.025px;
+        text-transform: uppercase;
+      }
+      &:hover {
+        svg path {
+          animation: svgAnimate 10s linear infinite forwards;
+        }
+      }
+    }
+  }
+}
+
+.hero-1,
+.hero-2,
+.hero-3 {
+  background-image: url("/public/img/home/hero/hero_bg_1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero-2 {
+  background-image: url("/public/img/home/hero/hero_bg_2.jpg");
+}
+
+.hero-3 {
+  background-image: url("/public/img/home/hero/hero_bg_3.jpg");
+}
+
+.swiper-hero {
+  position: relative;
+}
+
+.swiper-hero .swiper-hero-pagination {
+  position: absolute;
+  bottom: 80px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.swiper-hero .swiper-pagination-bullet {
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  position: relative;
+  opacity: 1;
+
+  &:hover {
+    svg mask circle {
+      stroke: #fff;
+      animation: dash 1s linear forwards;
+    }
+  }
+}
+
+.swiper-hero .swiper-pagination-bullet {
+  svg mask circle {
+    stroke: #fff;
+    animation: noDash 0.4s linear forwards;
+  }
+}
+
+.swiper-hero .swiper-pagination-bullet-active {
+  svg mask circle {
+    stroke: #fff;
+    stroke-dashoffset: 125.6;
+    animation: dash 0.6s linear forwards;
+  }
+}
+
+.swiper-hero-next,
+.swiper-hero-prev {
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  z-index: 2;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  transition: translate 400ms ease;
+}
+
+.swiper-hero-prev {
+  left: 80px;
+  rotate: 45deg;
+  &:hover {
+    translate: -5px -50%;
+  }
+}
+.swiper-hero-next {
+  right: 80px;
+  rotate: 225deg;
+  &:hover {
+    translate: 5px -50%;
+  }
+}
+
+@keyframes svgAnimate {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 314;
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 125.6;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes noDash {
+  to {
+    stroke-dashoffset: 125.6;
+  }
+}

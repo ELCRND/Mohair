@@ -1,0 +1,12 @@
+{
+  "name": "mohair",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss":"sass --watch scss/main.scss:css/styles.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
