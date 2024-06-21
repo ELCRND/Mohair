@@ -1,0 +1,15 @@
+.clients {
+  padding: 100px 80px 130px 80px;
+
+  .swiper-clients {
+    padding-top: 19px;
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      transition: translate 350ms ease-in-out;
+      &:hover {
+        translate: 0 -19px;
+      }
+    }
+  }
+}

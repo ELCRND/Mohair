@@ -1,23 +1,12 @@
 .masters {
+  padding-top: 111px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  .masters__title {
-    font-family: "Jost", sans-serif;
-    font-size: 45px;
-    line-height: 54px;
-    color: $dark-green;
-  }
   .masters__subtitle {
-    margin-top: 10px;
     margin-bottom: 20px;
-    font-family: "Ibarra Real Nova", serif;
-    font-style: italic;
-    font-size: 19px;
-    line-height: 30px;
-    color: $smoke;
   }
   .masters__text {
     max-width: 684px;
@@ -29,35 +18,114 @@
 }
 
 .masters__wrap {
+  width: 100%;
   margin-top: 71px;
   display: flex;
+  overflow: hidden;
+
+  @media screen and (max-width: 1440px) {
+    text-align: center;
+  }
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
   .master {
-    padding: 80px 160px;
-    &:nth-child(odd) {
-      border-top: 1px dashed #bfa785;
-    }
-    &:nth-child(even) {
-      border-width: 1px 1px 0 1px;
-      border-style: dashed;
-      border-color: #bfa785;
-    }
+    width: 100%;
+    margin-left: -1px;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    padding: 80px 0;
+    background-image: repeating-linear-gradient(
+        -18deg,
+        #bfa785,
+        #bfa785 7px,
+        transparent 7px,
+        transparent 17px,
+        #bfa785 17px
+      ),
+      repeating-linear-gradient(
+        72deg,
+        #bfa785,
+        #bfa785 7px,
+        transparent 7px,
+        transparent 17px,
+        #bfa785 17px
+      ),
+      repeating-linear-gradient(
+        162deg,
+        #bfa785,
+        #bfa785 7px,
+        transparent 7px,
+        transparent 17px,
+        #bfa785 17px
+      ),
+      repeating-linear-gradient(
+        252deg,
+        #bfa785,
+        #bfa785 7px,
+        transparent 7px,
+        transparent 17px,
+        #bfa785 17px
+      );
+    background-size: 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+    background-position: 0 0, 0 0, 100% 0, 0 100%;
+    background-repeat: no-repeat;
   }
 }
 
 .master {
+  background-color: transparent;
   .master__name {
+    width: fit-content;
+    display: inline-block;
     margin-top: 24px;
     margin-bottom: 4px;
+    margin-left: 160px;
+    margin-right: auto;
     font-family: "Jost", sans-serif;
     font-size: 30px;
     line-height: 36px;
     color: $dark;
+    @media screen and (max-width: 1440px) {
+      margin-left: 0;
+    }
   }
   .master__job {
+    margin-left: 160px;
     font-family: "Ibarra Real Nova", serif;
     font-style: italic;
     font-size: 19px;
     line-height: 30px;
     color: $smoke;
+    @media screen and (max-width: 1440px) {
+      margin-left: 0;
+    }
+  }
+  .master__img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    filter: drop-shadow(4px 4px 14px rgb(121, 122, 112));
+  }
+}
+
+.masters__ticker {
+  width: 100%;
+
+  background-color: $dark-green;
+  overflow: hidden;
+
+  .ticker__wrap {
+    width: max-content;
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-family: "Ibarra Real Nova", serif;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 30px;
+    color: $smoke-light;
+    animation: tickerMove 60s linear infinite forwards;
   }
 }

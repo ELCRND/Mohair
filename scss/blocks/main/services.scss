@@ -7,22 +7,73 @@
     content: "";
     width: 100%;
     height: 1px;
-    border-bottom: 0.55mm dashed #bfa785;
     position: absolute;
     top: 328px;
     left: 0;
+    background-image: repeating-linear-gradient(
+        -18deg,
+        #bfa785,
+        #bfa785 5px,
+        transparent 5px,
+        transparent 16px,
+        #bfa785 16px
+      ),
+      repeating-linear-gradient(
+        72deg,
+        #bfa785,
+        #bfa785 5px,
+        transparent 5px,
+        transparent 16px,
+        #bfa785 16px
+      ),
+      repeating-linear-gradient(
+        162deg,
+        #bfa785,
+        #bfa785 5px,
+        transparent 5px,
+        transparent 16px,
+        #bfa785 16px
+      ),
+      repeating-linear-gradient(
+        252deg,
+        #bfa785,
+        #bfa785 5px,
+        transparent 5px,
+        transparent 16px,
+        #bfa785 16px
+      );
+    background-size: 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+    background-position: 0 0, 0 0, 100% 0, 0 100%;
+    background-repeat: no-repeat;
+    @media screen and (max-width: 1024px) {
+      top: 499px;
+    }
+    @media screen and (max-width: 520px) {
+      top: 600px;
+    }
+    @media screen and (max-width: 375px) {
+      top: 700px;
+    }
   }
 }
 .services__container {
   width: min(100%, 1400px);
   margin-left: auto;
   margin-right: auto;
+  @media screen and (max-width: 1024px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .services .wrap {
   margin-bottom: 150px;
   display: grid;
   grid-template-columns: repeat(auto-fit, 1fr);
+  @media screen and (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+  }
 
   .services__description {
     max-width: 640px;
@@ -31,23 +82,17 @@
     font-size: 17px;
     line-height: 30px;
     color: rgb(51, 51, 51);
+    @media screen and (max-width: 1024px) {
+      margin-top: 40px;
+    }
   }
 
   .services__title {
     grid-column: 1 / 2;
     max-width: 660px;
-    font-family: "Jost", sans-serif;
-    font-size: 45px;
-    line-height: 54px;
-    color: $dark-green;
   }
   .services__subtitle {
     grid-column: 1 / 2;
-    font-family: "Ibarra Real Nova", serif;
-    font-style: italic;
-    font-size: 19px;
-    line-height: 28px;
-    color: $smoke;
   }
 }
 
@@ -58,6 +103,9 @@
 
   .service__img {
     margin-bottom: 21px;
+    @media screen and (max-width: 480px) {
+      max-height: 486px;
+    }
   }
 
   .service__title {
@@ -89,80 +137,29 @@
   gap: 14px;
 }
 
-.swiper-services .swiper-pagination-bullet {
-  width: 25px;
-  height: 25px;
-  background-color: transparent;
-  position: relative;
-  opacity: 1;
-
-  &:hover {
-    svg mask circle {
-      stroke: #fff;
-      animation: dash 1s linear forwards;
-    }
-  }
-}
-
-.swiper-services .swiper-pagination-bullet {
-  svg mask circle {
-    stroke: #fff;
-    animation: noDash 0.4s linear forwards;
-  }
-}
-
-.swiper-services .swiper-pagination-bullet-active {
-  svg mask circle {
-    stroke: #fff;
-    stroke-dashoffset: 125.6;
-    animation: dash 0.6s linear forwards;
-  }
-}
-
 .scissors {
   position: absolute;
-  top: 300px;
-  animation: scissors-move 2s linear forwards;
+  top: 299px;
+  // animation: scissors-move 2s linear forwards;
+
+  @media screen and (max-width: 1024px) {
+    top: 470px;
+  }
+  @media screen and (max-width: 520px) {
+    top: 571px;
+  }
+  @media screen and (max-width: 375px) {
+    top: 671px;
+  }
 }
 
 .scissors-top {
-  animation: scissors-top 0.6s linear;
+  // animation: scissors-top 0.6s linear;
   animation-iteration-count: 4;
   transform-origin: 6px 4px;
 }
 .scissors-bottom {
-  animation: scissors-bottom 0.6s linear;
+  // animation: scissors-bottom 0.6s linear;
   animation-iteration-count: 4;
   transform-origin: center;
-}
-
-@keyframes scissors-move {
-  to {
-    translate: 200px 0;
-  }
-}
-
-@keyframes scissors-top {
-  0% {
-    rotate: 0deg;
-  }
-  50% {
-    rotate: 30deg;
-    translate: 22px -4px;
-  }
-  0% {
-    rotate: 0deg;
-  }
-}
-@keyframes scissors-bottom {
-  0% {
-    rotate: 0deg;
-  }
-  50% {
-    rotate: -25deg;
-    translate: 0 -4px;
-  }
-  0% {
-    rotate: 0deg;
-  }
 }

@@ -1,4 +1,5 @@
-.blog-banner {
+.blog-banner,
+.blog-banner2 {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -7,6 +8,12 @@
   background-position: right;
   background-size: contain;
   color: $white;
+
+  @media screen and (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+  }
 }
 
 .blog-banner__content {
@@ -14,6 +21,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media screen and (max-width: 1024px) {
+    padding-top: 110px;
+    padding-bottom: 130px;
+    padding-left: 80px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
   .blog-banner__title {
     max-width: 528px;
@@ -30,7 +47,7 @@
     font-style: italic;
     font-size: 19px;
     line-height: 30px;
-    color: #9fa695;
+    color: $smoke-light;
   }
 
   .blog-banner__description {
@@ -69,5 +86,83 @@
     height: 100%;
     display: block;
     scale: 1.46;
+  }
+}
+
+.blog-banner2 {
+  margin-top: 120px;
+}
+.blog-banner2__content {
+  padding-top: 280px;
+  padding-left: 183px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media screen and (max-width: 1024px) {
+    padding-top: 110px;
+    padding-bottom: 130px;
+    padding-left: 80px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .blog-banner2__title {
+    max-width: 528px;
+    font-family: "Jost", sans-serif;
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .blog-banner2__subtitle {
+    max-width: 528px;
+    margin-top: 10px;
+    margin-bottom: 18px;
+    font-family: "Ibarra Real Nova", serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 30px;
+    color: $smoke-light;
+  }
+
+  .blog-banner2__description {
+    max-width: 528px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+.blog-banner2__btn {
+  max-width: 200px;
+  margin-top: 40px;
+  position: relative;
+  span {
+    position: absolute;
+    top: 25%;
+    left: 27%;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 3.025px;
+    text-transform: uppercase;
+  }
+  &:hover {
+    svg path {
+      animation: svgAnimate 10s linear infinite forwards;
+    }
+  }
+}
+
+.blog-banner2__img {
+  grid-column: 1 / 2;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    scale: 1.01;
+    position: relative;
+    bottom: 6px;
   }
 }

@@ -83,36 +83,6 @@
   gap: 24px;
 }
 
-.swiper-hero .swiper-pagination-bullet {
-  width: 25px;
-  height: 25px;
-  background-color: transparent;
-  position: relative;
-  opacity: 1;
-
-  &:hover {
-    svg mask circle {
-      stroke: #fff;
-      animation: dash 1s linear forwards;
-    }
-  }
-}
-
-.swiper-hero .swiper-pagination-bullet {
-  svg mask circle {
-    stroke: #fff;
-    animation: noDash 0.4s linear forwards;
-  }
-}
-
-.swiper-hero .swiper-pagination-bullet-active {
-  svg mask circle {
-    stroke: #fff;
-    stroke-dashoffset: 125.6;
-    animation: dash 0.6s linear forwards;
-  }
-}
-
 .swiper-hero-next,
 .swiper-hero-prev {
   width: 42px;
@@ -124,6 +94,10 @@
   border-left: 1px solid white;
   border-bottom: 1px solid white;
   transition: translate 400ms ease;
+
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
 }
 
 .swiper-hero-prev {
@@ -138,29 +112,5 @@
   rotate: 225deg;
   &:hover {
     translate: 5px -50%;
-  }
-}
-
-@keyframes svgAnimate {
-  0% {
-    stroke-dashoffset: 0;
-  }
-  100% {
-    stroke-dashoffset: 314;
-  }
-}
-
-@keyframes dash {
-  from {
-    stroke-dashoffset: 125.6;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes noDash {
-  to {
-    stroke-dashoffset: 125.6;
   }
 }

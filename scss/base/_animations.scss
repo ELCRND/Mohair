@@ -1,0 +1,117 @@
+//hero btn
+@keyframes svgAnimate {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 314;
+  }
+}
+
+//masters
+@keyframes tickerMove {
+  0% {
+    opacity: 1;
+  }
+  98% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    translate: -50% 0;
+  }
+}
+
+//statistics
+@keyframes indicator-scissors-move1 {
+  to {
+    translate: calc(100vw / 4) 0;
+  }
+}
+@keyframes indicator-scissors-move2 {
+  to {
+    translate: calc(100vw / 6) 0;
+  }
+}
+@keyframes indicator-scissors-move3 {
+  to {
+    translate: calc(100vw / 3.5) 0;
+  }
+}
+@keyframes indicator-scissors-move4 {
+  to {
+    translate: calc(100vw / 4.5) 0;
+  }
+}
+
+//statistics progressbars
+@keyframes indicator-scissors-progressbar1 {
+  to {
+    width: calc(100vw / 4 + 12px);
+  }
+}
+@keyframes indicator-scissors-progressbar2 {
+  to {
+    width: calc(100vw / 6 + 12px);
+  }
+}
+@keyframes indicator-scissors-progressbar3 {
+  to {
+    width: calc(100vw / 3.5 + 12px);
+  }
+}
+@keyframes indicator-scissors-progressbar4 {
+  to {
+    width: calc(100vw / 4.5 + 12px);
+  }
+}
+
+//swiper bullet-btns
+@keyframes dash {
+  from {
+    stroke-dashoffset: 125.6;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes noDash {
+  to {
+    stroke-dashoffset: 125.6;
+  }
+}
+
+//common scissors move
+@keyframes scissors-move {
+  to {
+    translate: 200px 0;
+  }
+}
+
+@keyframes scissors-top {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+    rotate: 30deg;
+    translate: 22px -4px;
+  }
+  0% {
+    rotate: 0deg;
+  }
+}
+@keyframes scissors-bottom {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+    rotate: -25deg;
+    translate: 0 -4px;
+  }
+  0% {
+    rotate: 0deg;
+  }
+}

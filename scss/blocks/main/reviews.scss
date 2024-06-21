@@ -1,0 +1,52 @@
+.reviews {
+  padding-top: 111px;
+  text-align: center;
+}
+.reviews__container {
+  width: min(1400px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.review {
+  padding: 48px 59px 51px 59px;
+  border: 1px solid #e0dfdc;
+  position: relative;
+  text-align: left;
+}
+
+.review__body {
+  margin-bottom: 10px;
+  display: block;
+  font-family: "Jost", sans-serif;
+  font-size: 25px;
+  line-height: 32px;
+  color: $dark-green;
+}
+
+.review__author {
+  font-family: "Ibarra Real Nova", serif;
+  font-style: italic;
+  font-size: 19px;
+  line-height: 30px;
+  color: $smoke;
+}
+
+.swiper-reviews {
+  margin-top: 71px;
+  padding-left: 1px;
+}
+
+.review__img {
+  position: absolute;
+  bottom: -40px;
+  right: 60px;
+}
+
+.swiper-reviews-pagination {
+  margin-top: 74px;
+}
