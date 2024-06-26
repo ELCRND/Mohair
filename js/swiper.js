@@ -83,11 +83,11 @@ const brandsSwiper = new Swiper(".swiper-hero", {
         `,
       ];
 
-      return `<button class="${className}">
+      return `<div class="${className}">
       
       ${bulletSVGs[index]}
       
-      </button>`;
+      </div>`;
     },
   },
 });
@@ -222,11 +222,11 @@ const servicesSwiper = new Swiper(".swiper-services", {
         `,
       ];
 
-      return `<button class="${className}">
+      return `<div class="${className}">
       
       ${bulletSVGs[index]}
       
-      </button>`;
+      </div>`;
     },
   },
 });
@@ -378,11 +378,11 @@ const reviewsSwiper = new Swiper(".swiper-reviews", {
         `,
       ];
 
-      return `<button class="${className}">
+      return `<div class="${className}">
       
       ${bulletSVGs[index]}
       
-      </button>`;
+      </div>`;
     },
   },
 });
