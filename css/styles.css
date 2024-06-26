@@ -1,7 +1,4 @@
 /* Reset and base styles  */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&display=swap");
 * {
   padding: 0px;
   margin: 0px;
@@ -129,6 +126,18 @@ legend {
   display: block;
 }
 
+@font-face {
+  font-family: "Jost";
+  src: url("/public/fonts/Jost-Regular.ttf");
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/public/fonts/Inter-Regular.ttf");
+}
+@font-face {
+  font-family: "Ibarra Real Nova";
+  src: url("/public/fonts/IbarraRealNova-Regular.ttf");
+}
 body {
   font-family: "Inter", sans-serif;
   font-size: 18px;
@@ -412,7 +421,6 @@ body {
   font-family: "Jost", sans-serif;
   font-size: 55px;
   line-height: 69px;
-  font-weight: 400;
 }
 .hero .hero-1 span,
 .hero .hero-2 span,
